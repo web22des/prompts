@@ -1,0 +1,41 @@
+{
+    // Основные настройки редактора
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+
+    // Специфичные настройки для Markdown
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        },
+        "editor.suggest.showWords": false,
+        "editor.tabSize": 2
+    },
+
+    // Настройки валидации Markdown
+    "markdown.validate.enabled": true,
+    "markdown.preview.breaks": true,
+
+    // Prettier настройки для Markdown
+    "prettier.printWidth": 80,
+    "prettier.bracketSameLine": false,
+    "prettier.proseWrap": "preserve", // ← ИЗМЕНИЛ: сохраняет переносы
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "none",
+    "prettier.semi": false,
+
+    // ДОБАВИЛ: Отключаем форматирование списков
+    "prettier.mdx": {
+        "proseWrap": "preserve"
+    },
+
+    // Дополнительные полезные расширения (рекомендую установить)
+    "files.associations": {
+        "*.md": "markdown"
+    }
+}
