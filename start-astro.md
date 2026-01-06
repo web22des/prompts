@@ -23,69 +23,93 @@
 
 ```
 📦src
-┣ 📂components
-┃ ┣ 📂partials
-┃ ┃ ┣ 📜Footer.astro
-┃ ┃ ┣ 📜Head.astro
-┃ ┃ ┗ 📜Header.astro
-┃ ┗ 📂ui
-┃ ┃ ┣ 📜CardPost.astro
-┃ ┃ ┣ 📜Images.astro
-┃ ┃ ┣ 📜Link.astro
-┃ ┃ ┣ 📜Logo.astro
-┃ ┃ ┣ 📜MenuToggle.astro
-┃ ┃ ┣ 📜SocialContact.astro
-┃ ┃ ┗ 📜ThemeToggle.astro
-┣ 📂layouts
-┃ ┣ 📜MarkdownPostLayout.astro
-┃ ┣ 📜NewMdPostLayout.astro // Новый шаблон для постов
-┃ ┗ 📜PagesLayout.astro
-┣ 📂pages
-┃ ┣ 📜[...slug].astro
-┃ ┣ 📜blog.astro
-┃ ┣ 📜catalog.astro
-┃ ┣ 📜contacts.astro
-┃ ┣ 📜index.astro
-┃ ┗ 📜test-posts.astro
-┗ 📂styles
-┃ ┣ 📂base
-┃ ┃ ┣ 📂mixins
-┃ ┃ ┃ ┣ 📜_adaptive.scss
-┃ ┃ ┃ ┣ 📜_counter.scss
-┃ ┃ ┃ ┣ 📜_fontfase.scss
-┃ ┃ ┃ ┣ 📜_math.scss
-┃ ┃ ┃ ┣ 📜_rem-em.scss
-┃ ┃ ┃ ┣ 📜_transparent-color.scss
-┃ ┃ ┃ ┣ 📜_truncate-text.scss
-┃ ┃ ┃ ┣ 📜_utilites.scss
-┃ ┃ ┃ ┣ 📜adaptiveValue.scss
-┃ ┃ ┃ ┗ 📜grid.scss
-┃ ┃ ┣ 📜base.scss
-┃ ┃ ┣ 📜button.scss
-┃ ┃ ┣ 📜common.scss
-┃ ┃ ┣ 📜media-new.scss
-┃ ┃ ┣ 📜media.scss
-┃ ┃ ┣ 📜mixins.scss
-┃ ┃ ┣ 📜null.scss
-┃ ┃ ┣ 📜scroll.scss
-┃ ┃ ┗ 📜variables.scss
-┃ ┣ 📂fonts
-┃ ┃ ┣ 📜fonts.scss
-┃ ┃ ┗ 📜icons.scss
-┃ ┣ 📂libs
-┃ ┃ ┣ 📜form.scss
-┃ ┃ ┗ 📜spollers.scss
-┃ ┣ 📂themes
-┃ ┃ ┗ 📂v_01
-┃ ┃ ┃ ┣ 📜M3.json
-┃ ┃ ┃ ┣ 📜dark.scss
-┃ ┃ ┃ ┗ 📜light.scss
-┃ ┣ 📂utils
-┃ ┃ ┗ 📜_focus-visible.scss
-┃ ┗ 📜global.scss
+ ┣ 📂assets
+ ┃ ┣ 📂home
+ ┃ ┃ ┗ 📜hero-bg.jpg
+ ┃ ┣ 📂programming
+ ┃ ┃ ┗ 📜06.jpg
+ ┃ ┣ 📜blog-placeholder-1.jpg
+ ┃ ┣ 📜blog-placeholder-2.jpg
+ ┃ ┣ 📜blog-placeholder-3.jpg
+ ┃ ┣ 📜blog-placeholder-4.jpg
+ ┃ ┣ 📜blog-placeholder-5.jpg
+ ┃ ┗ 📜blog-placeholder-about.jpg
+ ┣ 📂components
+ ┃ ┣ 📂partials
+ ┃ ┃ ┣ 📜Footer.astro
+ ┃ ┃ ┣ 📜Head.astro
+ ┃ ┃ ┗ 📜Header.astro
+ ┃ ┗ 📂ui
+ ┃ ┃ ┣ 📂card
+ ┃ ┃ ┃ ┗ 📜CardBaseIconVar01.astro
+ ┃ ┃ ┣ 📜Images.astro
+ ┃ ┃ ┣ 📜Link.astro
+ ┃ ┃ ┣ 📜Logo.astro
+ ┃ ┃ ┣ 📜MenuToggle.astro
+ ┃ ┃ ┣ 📜SocialContact.astro
+ ┃ ┃ ┗ 📜ThemeToggle.astro
+ ┣ 📂content
+ ┃ ┣ 📂blog
+ ┃ ┃ ┣ 📜first-post.md
+ ┃ ┃ ┣ 📜markdown-style-guide.md
+ ┃ ┃ ┣ 📜programming-post.md
+ ┃ ┃ ┣ 📜second-post.md
+ ┃ ┃ ┗ 📜third-post.md
+ ┃ ┗ 📂test
+ ┣ 📂layouts
+ ┃ ┣ 📜BlogPost.astro
+ ┃ ┗ 📜PagesLayout.astro
+ ┣ 📂pages
+ ┃ ┣ 📂blog
+ ┃ ┃ ┣ 📜[...slug].astro
+ ┃ ┃ ┗ 📜index.astro
+ ┃ ┣ 📜catalog.astro
+ ┃ ┣ 📜contacts.astro
+ ┃ ┗ 📜index.astro
+ ┣ 📂scripts
+ ┃ ┣ 📂test
+ ┃ ┗ 📂utils
+ ┃ ┃ ┣ 📜scroll.js
+ ┃ ┃ ┗ 📜scroll.md
+ ┣ 📂styles
+ ┃ ┣ 📂base
+ ┃ ┃ ┣ 📂mixins
+ ┃ ┃ ┃ ┣ 📜_adaptive.scss
+ ┃ ┃ ┃ ┣ 📜_counter.scss
+ ┃ ┃ ┃ ┣ 📜_fontfase.scss
+ ┃ ┃ ┃ ┣ 📜_math.scss
+ ┃ ┃ ┃ ┣ 📜_rem-em.scss
+ ┃ ┃ ┃ ┣ 📜_transparent-color.scss
+ ┃ ┃ ┃ ┣ 📜_truncate-text.scss
+ ┃ ┃ ┃ ┣ 📜_utilites.scss
+ ┃ ┃ ┃ ┣ 📜adaptiveValue.scss
+ ┃ ┃ ┃ ┗ 📜grid.scss
+ ┃ ┃ ┣ 📜base.scss
+ ┃ ┃ ┣ 📜button.scss
+ ┃ ┃ ┣ 📜common.scss
+ ┃ ┃ ┣ 📜media-new.scss
+ ┃ ┃ ┣ 📜media.scss
+ ┃ ┃ ┣ 📜mixins.scss
+ ┃ ┃ ┣ 📜null.scss
+ ┃ ┃ ┣ 📜scroll.scss
+ ┃ ┃ ┗ 📜variables.scss
+ ┃ ┣ 📂fonts
+ ┃ ┃ ┣ 📜fonts.scss
+ ┃ ┃ ┗ 📜icons.scss
+ ┃ ┣ 📂libs
+ ┃ ┃ ┣ 📜form.scss
+ ┃ ┃ ┗ 📜spollers.scss
+ ┃ ┣ 📂themes
+ ┃ ┃ ┗ 📂v_01
+ ┃ ┃ ┃ ┣ 📜M3.json
+ ┃ ┃ ┃ ┣ 📜dark.scss
+ ┃ ┃ ┃ ┗ 📜light.scss
+ ┃ ┣ 📂utils
+ ┃ ┃ ┗ 📜_focus-visible.scss
+ ┃ ┗ 📜global.scss
+ ┣ 📜consts.ts
+ ┗ 📜content.config.ts
 
 ```
 
 Твоя задача запомнить все что тут написано, постоянно держать в памяти контекст всей беседы, а сейчас сделай анализ всего что ты понял, и напиши резюме, того что нужно сделать, а так же проанализируй структуру проекта, исходя из загруженной документации Astro
-
-
