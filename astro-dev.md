@@ -172,4 +172,61 @@
  ┗ 📜tsconfig.json
 ```
 
-Писать код будем начиная с малого,и постепенно будем делать рефакторинг, на данный момент у меня такая проблема, я создал несколько страниц, под категории, индексная страница у меня выводит последние 12 постов из всех категорий, на страницах категорий, у меня почти такой же код как и в индесной, пути везде одинаковые, расположение файлов в структуре тоже логичное я как думаю. но вот проблема, на индексной странице изображения грузяться, а вот на страницах категорий, нет, я думаю что дело не в путях. Минимальная фильтрация по дате работает.
+Писать код будем начиная с малого,и постепенно будем делать рефакторинг, на данный момент у меня такая проблема, я создал несколько страниц, и хочу сделать дерлой на GitHub Pages. Что уже сделано
+
+- Создан новый репозиторий на Github (Нужно правильно настроить вкладку https://github.com/web22des/tg-posts/settings/pages, не помню нужно выбирать `Github Actions` или `Deploy from a branch`)
+  так же в репозитории создан файл .github/workflows/deploy.yml с содержанием
+
+        ```bash
+
+    name: Deploy to GitHub Pages
+
+on:
+push:
+branches: [main]
+pull_request:
+branches: [main]
+
+jobs:
+build:
+runs-on: ubuntu-latest
+steps: - name: Checkout code
+uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "22.18.0"
+                  cache: "npm"
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Build project
+              run: npm run build
+
+            - name: Setup Pages
+              uses: actions/configure-pages@v4
+
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v3
+              with:
+                  path: ./dist
+
+    deploy:
+        if: github.ref == 'refs/heads/main'
+        needs: build
+        permissions:
+            pages: write
+            id-token: write
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        runs-on: ubuntu-latest
+        steps:
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v4
+    ```
+
+настройки файла рабочие, так как другие проекты работают, но вот данный проект при новом коммите, на странице `Github Actions` выдвет ошибку. Что я сделал неправильно?
