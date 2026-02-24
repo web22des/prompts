@@ -1,4 +1,4 @@
-Тебя зовут Дип. Сейчас 2025 год.
+Тебя зовут Дип. Сейчас 2026 год.
 Ты ведущий специалист (сеньор 100 уровня IQ)— специалист по современным технологиям, и твой опыт позволяет тебе легко разоабатывать современные сайты, Ведь у тебя опыт в разработке более 10 лет. Помни, что ты не просто разработчик — ты творец. Каждый проект, который ты реализуешь, — это возможность проявить свои идеи и креативность. Ты обладаешь уникальным набором навыков, которые делают тебя ценным специалистом в мире веб-разработки.
 Твой любимый язык программирования это JavaScript.
 Твой любимый инструмент это Astro, метафреймворк для статичных контент-сайтов.
@@ -23,210 +23,165 @@
 Все ли тебе понятно?
 Если хочешь можешь задавать вопросы.
 
-===
-все что касается дизайна сайта, вида карточек, и прочей визуальной части, это мы опускаем, мне интересна пока логика, а именно сортировка по категории, подкатегории, автору (возможно в будущем) и по дате . На данный момент проект уже немного начат, есть структура и логика, которая пока не работает как должно. Что уже есть несколько страниц, каждая страница, это уже ка бы категория, ну к примеру,
-
-1. Страница о программировании содержит в себе все курсы про программирование (JavaScript, php, python и так далее)
-2. Страница о Кулинарии содержит в себе все курсы, но так же имеет свои подкатегории (Торты, и другие)
-3. Страница о спорте (фитнесс, йога, кардиотренеровки)
-4. Страница с курсами которые не подходят ни под одну категорию.
-   Вот моя структура проекта
+Вот моя структура проекта
 
 ### Структура проекта
 
-```text
-📦base-course
- ┣ 📂.astro
- ┃ ┣ 📂collections
- ┃ ┣ 📜content-assets.mjs
- ┃ ┣ 📜content-modules.mjs
- ┃ ┣ 📜content.d.ts
- ┃ ┣ 📜data-store.json
- ┃ ┣ 📜settings.json
- ┃ ┗ 📜types.d.ts
- ┣ 📂.github
- ┃ ┗ 📂workflows
- ┃ ┃ ┗ 📜deploy.yml
- ┣ 📂.vscode
- ┃ ┣ 📜2025.code-snippets
- ┃ ┣ 📜extensions.json
- ┃ ┣ 📜launch.json
- ┃ ┗ 📜settings.json
- ┣ 📂public
- ┃ ┣ 📂favicon
- ┃ ┃ ┣ 📜android-chrome-192x192.png
- ┃ ┃ ┣ 📜android-chrome-512x512.png
- ┃ ┃ ┣ 📜apple-touch-icon.png
- ┃ ┃ ┣ 📜browserconfig.xml
- ┃ ┃ ┣ 📜favicon-16x16.png
- ┃ ┃ ┣ 📜favicon-32x32.png
- ┃ ┃ ┣ 📜favicon.ico
- ┃ ┃ ┣ 📜mstile-144x144.png
- ┃ ┃ ┣ 📜mstile-150x150.png
- ┃ ┃ ┣ 📜mstile-310x150.png
- ┃ ┃ ┣ 📜mstile-310x310.png
- ┃ ┃ ┣ 📜mstile-70x70.png
- ┃ ┃ ┣ 📜safari-pinned-tab.svg
- ┃ ┃ ┗ 📜site.webmanifest
- ┃ ┣ 📂fonts
- ┃ ┃ ┣ 📜Roboto-Bold.woff2
- ┃ ┃ ┣ 📜Roboto-Medium.woff2
- ┃ ┃ ┣ 📜Roboto-Regular.woff2
- ┃ ┃ ┗ 📜icomoon.woff2
+```txt
+📦src
+ ┣ 📂assets
  ┃ ┗ 📂images
- ┃ ┃ ┣ 📂logo
- ┃ ┃ ┃ ┣ 📜logo-dark.svg
- ┃ ┃ ┃ ┣ 📜logo-light.svg
- ┃ ┃ ┃ ┗ 📜logo.svg
- ┃ ┃ ┗ 📜base_medium.jpg
+ ┃ ┃ ┗ 📂content
+ ┃ ┃ ┃ ┣ 📂gallery
+ ┃ ┃ ┃ ┃ ┣ 📜Macbook.png
+ ┃ ┃ ┃ ┃ ┣ 📜gallery-01-sm.jpg
+ ┃ ┃ ┃ ┃ ┣ 📜gallery-02-sm.jpg
+ ┃ ┃ ┃ ┃ ┣ 📜gallery-03-sm.jpg
+ ┃ ┃ ┃ ┃ ┗ 📜gallery-04-sm.jpg
+ ┃ ┃ ┃ ┣ 📂pages-gallery
+ ┃ ┃ ┃ ┃ ┗ 📜gallery-01.jpg
+ ┃ ┃ ┃ ┣ 📂serviсes
+ ┃ ┃ ┃ ┃ ┣ 📜serviсes-01.jpg
+ ┃ ┃ ┃ ┃ ┣ 📜serviсes-02.jpg
+ ┃ ┃ ┃ ┃ ┣ 📜serviсes-03.jpg
+ ┃ ┃ ┃ ┃ ┣ 📜serviсes-04.jpg
+ ┃ ┃ ┃ ┃ ┣ 📜serviсes-05.jpg
+ ┃ ┃ ┃ ┃ ┗ 📜serviсes-06.jpg
+ ┃ ┃ ┃ ┣ 📂website-types
+ ┃ ┃ ┃ ┃ ┣ 📜hero-01-pc.jpg
+ ┃ ┃ ┃ ┃ ┣ 📜hero-02-pc.jpg
+ ┃ ┃ ┃ ┃ ┣ 📜hero-03-pc.jpg
+ ┃ ┃ ┃ ┃ ┣ 📜hero-04-pc.jpg
+ ┃ ┃ ┃ ┃ ┣ 📜hero-05-pc.jpg
+ ┃ ┃ ┃ ┃ ┗ 📜hero-06-pc.jpg
+ ┃ ┃ ┃ ┣ 📜bg-01.jpg
+ ┃ ┃ ┃ ┣ 📜bg-02.jpg
+ ┃ ┃ ┃ ┣ 📜bg-03.jpg
+ ┃ ┃ ┃ ┗ 📜hero-01.png
+ ┣ 📂components
+ ┃ ┣ 📂partials
+ ┃ ┃ ┣ 📜Footer.astro
+ ┃ ┃ ┣ 📜Header.astro
+ ┃ ┃ ┗ 📜HeaderBurger.astro
+ ┃ ┣ 📂sections
+ ┃ ┃ ┣ 📜Advantages.astro
+ ┃ ┃ ┣ 📜ContactForm.astro
+ ┃ ┃ ┣ 📜DevelopmentProcess.astro
+ ┃ ┃ ┣ 📜ExamplesWork.astro
+ ┃ ┃ ┣ 📜Hero.astro
+ ┃ ┃ ┣ 📜Result.astro
+ ┃ ┃ ┣ 📜SectionSwiperSun.astro
+ ┃ ┃ ┣ 📜SectionTest.astro
+ ┃ ┃ ┣ 📜Servises.astro
+ ┃ ┃ ┣ 📜Test2.astro
+ ┃ ┃ ┗ 📜WebsiteTypes.astro
+ ┃ ┗ 📂ui
+ ┃ ┃ ┣ 📂ContentCard
+ ┃ ┃ ┃ ┣ 📜ContentCard.astro
+ ┃ ┃ ┃ ┗ 📜ContentCard.md
+ ┃ ┃ ┣ 📂FeatureList
+ ┃ ┃ ┃ ┣ 📜FeatureList.astro
+ ┃ ┃ ┃ ┗ 📜FeatureList.astro.md
+ ┃ ┃ ┣ 📂sliders
+ ┃ ┃ ┃ ┣ 📜BaseSlider.astro
+ ┃ ┃ ┃ ┣ 📜HeroSlider.astro
+ ┃ ┃ ┃ ┣ 📜SliderPreview.astro
+ ┃ ┃ ┃ ┗ 📜VerticalSlider.astro
+ ┃ ┃ ┣ 📜Animations.astro
+ ┃ ┃ ┣ 📜Card.astro
+ ┃ ┃ ┣ 📜Form.astro
+ ┃ ┃ ┣ 📜Images.astro
+ ┃ ┃ ┣ 📜Link.astro
+ ┃ ┃ ┣ 📜Logo.astro
+ ┃ ┃ ┣ 📜MenuSubList.astro
+ ┃ ┃ ┣ 📜MenuToggle.astro
+ ┃ ┃ ┣ 📜PopapErrorLink.astro
+ ┃ ┃ ┣ 📜SocialContact.astro
+ ┃ ┃ ┣ 📜ThemeToggle.astro
+ ┃ ┃ ┗ 📜TitleSection.astro
+ ┣ 📂layouts
+ ┃ ┣ 📜MarkdownLayout.astro
+ ┃ ┗ 📜PageLayout.astro
+ ┣ 📂pages
+ ┃ ┣ 📂documentations
+ ┃ ┃ ┣ 📜post00.md
+ ┃ ┃ ┣ 📜post01.md
+ ┃ ┃ ┣ 📜post02.md
+ ┃ ┃ ┣ 📜post03.md
+ ┃ ┃ ┣ 📜post04.md
+ ┃ ┃ ┣ 📜post05.md
+ ┃ ┃ ┣ 📜post06.md
+ ┃ ┃ ┣ 📜post07.md
+ ┃ ┃ ┗ 📜post08.md
+ ┃ ┣ 📂news
+ ┃ ┃ ┣ 📜news00.md
+ ┃ ┃ ┗ 📜news01.md
+ ┃ ┣ 📂posts
+ ┃ ┃ ┣ 📜001-A_website_is_a_tool.md
+ ┃ ┃ ┣ 📜_post00.txt
+ ┃ ┃ ┣ 📜icons.md
+ ┃ ┃ ┗ 📜post01.md
+ ┃ ┣ 📜colors.astro
+ ┃ ┣ 📜contacts.astro
+ ┃ ┣ 📜documentation.astro
+ ┃ ┣ 📜gallery.astro
+ ┃ ┣ 📜index.astro
+ ┃ ┣ 📜news.astro
+ ┃ ┣ 📜post.astro
+ ┃ ┗ 📜test.astro
  ┣ 📂scripts
- ┣ 📂src
- ┃ ┣ 📂assets
- ┃ ┃ ┗ 📜base_medium.jpg
- ┃ ┣ 📂components
- ┃ ┃ ┣ 📂partials
- ┃ ┃ ┃ ┣ 📜Footer.astro
- ┃ ┃ ┃ ┣ 📜Head.astro
- ┃ ┃ ┃ ┗ 📜Header.astro
- ┃ ┃ ┗ 📂ui
- ┃ ┃ ┃ ┣ 📜CourseCard.astro
- ┃ ┃ ┃ ┣ 📜Images.astro
- ┃ ┃ ┃ ┣ 📜Link.astro
- ┃ ┃ ┃ ┣ 📜Logo.astro
- ┃ ┃ ┃ ┣ 📜MenuToggle.astro
- ┃ ┃ ┃ ┣ 📜SocialContact.astro
- ┃ ┃ ┃ ┗ 📜ThemeToggle.astro
- ┃ ┣ 📂content
- ┃ ┃ ┣ 📂cooking
- ┃ ┃ ┃ ┣ 📜cake-decorating-pro.md
- ┃ ┃ ┃ ┣ 📜italian-pasta-masterclass.md
- ┃ ┃ ┃ ┗ 📜sushi-rolls-techniques.md
- ┃ ┃ ┣ 📂programming
- ┃ ┃ ┃ ┣ 📜javascript-basics.md
- ┃ ┃ ┃ ┣ 📜php-advanced.md
- ┃ ┃ ┃ ┣ 📜python-data-science.md
- ┃ ┃ ┃ ┗ 📜react-complete-guide.md
- ┃ ┃ ┗ 📂sport
- ┃ ┃ ┃ ┣ 📜crossfit-foundations.md
- ┃ ┃ ┃ ┣ 📜pilates-advanced.md
- ┃ ┃ ┃ ┗ 📜yoga-for-beginners.md
- ┃ ┣ 📂layouts
- ┃ ┃ ┗ 📜PagesLayout.astro
- ┃ ┣ 📂lib
- ┃ ┃ ┣ 📂content
- ┃ ┃ ┃ ┗ 📜posts.mjs
- ┃ ┃ ┗ 📂utils
- ┃ ┃ ┃ ┗ 📜posts-helpers.mjs
- ┃ ┣ 📂pages
- ┃ ┃ ┣ 📜catalog.astro
- ┃ ┃ ┣ 📜contacts.astro
- ┃ ┃ ┣ 📜cooking.astro
- ┃ ┃ ┣ 📜index.astro
- ┃ ┃ ┣ 📜programming.astro
- ┃ ┃ ┗ 📜sport.astro
- ┃ ┣ 📂styles
- ┃ ┃ ┣ 📂base
- ┃ ┃ ┃ ┣ 📂mixins
- ┃ ┃ ┃ ┃ ┣ 📜_adaptive.scss
- ┃ ┃ ┃ ┃ ┣ 📜_counter.scss
- ┃ ┃ ┃ ┃ ┣ 📜_fontfase.scss
- ┃ ┃ ┃ ┃ ┣ 📜_math.scss
- ┃ ┃ ┃ ┃ ┣ 📜_rem-em.scss
- ┃ ┃ ┃ ┃ ┣ 📜_transparent-color.scss
- ┃ ┃ ┃ ┃ ┣ 📜_truncate-text.scss
- ┃ ┃ ┃ ┃ ┣ 📜_utilites.scss
- ┃ ┃ ┃ ┃ ┣ 📜adaptiveValue.scss
- ┃ ┃ ┃ ┃ ┗ 📜grid.scss
- ┃ ┃ ┃ ┣ 📜base.scss
- ┃ ┃ ┃ ┣ 📜button.scss
- ┃ ┃ ┃ ┣ 📜common.scss
- ┃ ┃ ┃ ┣ 📜media-new.scss
- ┃ ┃ ┃ ┣ 📜media.scss
- ┃ ┃ ┃ ┣ 📜mixins.scss
- ┃ ┃ ┃ ┣ 📜null.scss
- ┃ ┃ ┃ ┣ 📜scroll.scss
- ┃ ┃ ┃ ┗ 📜variables.scss
- ┃ ┃ ┣ 📂fonts
- ┃ ┃ ┃ ┣ 📜fonts.scss
- ┃ ┃ ┃ ┗ 📜icons.scss
- ┃ ┃ ┣ 📂libs
- ┃ ┃ ┃ ┣ 📜form.scss
- ┃ ┃ ┃ ┗ 📜spollers.scss
- ┃ ┃ ┣ 📂themes
- ┃ ┃ ┃ ┗ 📂v_01
- ┃ ┃ ┃ ┃ ┣ 📜M3.json
- ┃ ┃ ┃ ┃ ┣ 📜dark.scss
- ┃ ┃ ┃ ┃ ┗ 📜light.scss
- ┃ ┃ ┣ 📂utils
- ┃ ┃ ┃ ┗ 📜_focus-visible.scss
- ┃ ┃ ┗ 📜global.scss
- ┃ ┗ 📂templates
- ┣ 📜.gitignore
- ┣ 📜README.md
- ┣ 📜astro.config.mjs
- ┣ 📜file.md
- ┣ 📜folder_hierarchy.md
- ┣ 📜help.md
- ┣ 📜package-lock.json
- ┣ 📜package.json
- ┗ 📜tsconfig.json
+ ┃ ┣ 📂functions
+ ┃ ┃ ┣ 📜detectTouchDevice.js
+ ┃ ┃ ┗ 📜spolers.js
+ ┃ ┣ 📂libs
+ ┃ ┃ ┣ 📂swiper
+ ┃ ┃ ┃ ┗ 📜swiper-config.js
+ ┃ ┃ ┗ 📜slider.js
+ ┃ ┣ 📂ui
+ ┃ ┃ ┣ 📜dataMediaQueries.js
+ ┃ ┃ ┣ 📜scrollAnimation.js
+ ┃ ┃ ┗ 📜slide-animations.js
+ ┃ ┗ 📜main.js
+ ┣ 📂styles
+ ┃ ┣ 📂base
+ ┃ ┃ ┣ 📂mixins
+ ┃ ┃ ┃ ┣ 📜_adaptive.scss
+ ┃ ┃ ┃ ┣ 📜_counter.scss
+ ┃ ┃ ┃ ┣ 📜_fontfase.scss
+ ┃ ┃ ┃ ┣ 📜_math.scss
+ ┃ ┃ ┃ ┣ 📜_rem-em.scss
+ ┃ ┃ ┃ ┣ 📜_transparent-color.scss
+ ┃ ┃ ┃ ┣ 📜_truncate-text.scss
+ ┃ ┃ ┃ ┣ 📜_utilites.scss
+ ┃ ┃ ┃ ┣ 📜adaptiveValue.scss
+ ┃ ┃ ┃ ┗ 📜grid.scss
+ ┃ ┃ ┣ 📜base.scss
+ ┃ ┃ ┣ 📜button.scss
+ ┃ ┃ ┣ 📜common.scss
+ ┃ ┃ ┣ 📜media-new.scss
+ ┃ ┃ ┣ 📜media.scss
+ ┃ ┃ ┣ 📜mixins.scss
+ ┃ ┃ ┣ 📜null.scss
+ ┃ ┃ ┣ 📜scroll.scss
+ ┃ ┃ ┗ 📜variables.scss
+ ┃ ┣ 📂fonts
+ ┃ ┃ ┣ 📜fonts.scss
+ ┃ ┃ ┗ 📜icons.scss
+ ┃ ┣ 📂libs
+ ┃ ┃ ┣ 📜form.scss
+ ┃ ┃ ┗ 📜spollers.scss
+ ┃ ┣ 📂themes
+ ┃ ┃ ┗ 📂v_01
+ ┃ ┃ ┃ ┣ 📜M3.json
+ ┃ ┃ ┃ ┣ 📜dark.scss
+ ┃ ┃ ┃ ┗ 📜light.scss
+ ┃ ┣ 📂utils
+ ┃ ┃ ┗ 📜_focus-visible.scss
+ ┃ ┣ 📜global.scss
+ ┃ ┣ 📜main.scss
+ ┃ ┗ 📜markdown-base.scss
+ ┗ 📂templates
+ ┃ ┗ 📂navigations
+ ┃ ┃ ┗ 📜MenuSubListV01.astro
+
 ```
-
-Писать код будем начиная с малого,и постепенно будем делать рефакторинг, на данный момент у меня такая проблема, я создал несколько страниц, и хочу сделать дерлой на GitHub Pages. Что уже сделано
-
-- Создан новый репозиторий на Github (Нужно правильно настроить вкладку https://github.com/web22des/tg-posts/settings/pages, не помню нужно выбирать `Github Actions` или `Deploy from a branch`)
-  так же в репозитории создан файл .github/workflows/deploy.yml с содержанием
-
-        ```bash
-
-    name: Deploy to GitHub Pages
-
-on:
-push:
-branches: [main]
-pull_request:
-branches: [main]
-
-jobs:
-build:
-runs-on: ubuntu-latest
-steps: - name: Checkout code
-uses: actions/checkout@v4
-
-            - name: Setup Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version: "22.18.0"
-                  cache: "npm"
-
-            - name: Install dependencies
-              run: npm ci
-
-            - name: Build project
-              run: npm run build
-
-            - name: Setup Pages
-              uses: actions/configure-pages@v4
-
-            - name: Upload artifact
-              uses: actions/upload-pages-artifact@v3
-              with:
-                  path: ./dist
-
-    deploy:
-        if: github.ref == 'refs/heads/main'
-        needs: build
-        permissions:
-            pages: write
-            id-token: write
-        environment:
-            name: github-pages
-            url: ${{ steps.deployment.outputs.page_url }}
-        runs-on: ubuntu-latest
-        steps:
-            - name: Deploy to GitHub Pages
-              id: deployment
-              uses: actions/deploy-pages@v4
-    ```
-
-настройки файла рабочие, так как другие проекты работают, но вот данный проект при новом коммите, на странице `Github Actions` выдвет ошибку. Что я сделал неправильно?
